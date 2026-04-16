@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: M-E-GA2
+Version: 2.0.0b6
+Summary: A Genetic Algorithm framework with Mutable Encoding.
+Home-page: https://github.com/ML-flash/M-E-GA
+Author: Matt Andrews
+Author-email: Matthew.Andrews2024@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xxhash
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ARI_Benchmark
+ARI Benchmark adapted to run on the MEGA framework by Matthew Andrews (AKA the_Guy)
