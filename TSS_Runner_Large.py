@@ -22,9 +22,9 @@ except ImportError:
     exit()
 
 try:
-    from TSS_benchmark import TSS_Benchmark, apply_chemistry_fast, score_sack, PROPS
+    from TSS_Benchmark_Large import TSS_Benchmark, apply_chemistry_fast, score_sack, PROPS
 except ImportError:
-    print("Error: Could not import from TSS_benchmark.")
+    print("Error: Could not import from TSS_Benchmark_Large.")
     exit()
 
 # ----------------------------------------------------------------------------
@@ -34,8 +34,8 @@ GLOBAL_SEED = None  # MEGA evolutionary seed — None for stochastic runs
 ENV_SEED = 42069    # Environment seed — fixed standard candle matching benchmark
 random.seed(GLOBAL_SEED)
 
-VOLUME = 15
-NUM_ITEMS = 200
+VOLUME = 45
+NUM_ITEMS = 2000
 NUM_GROUPS = 5
 MAX_SIZE = 80
 MAX_WEIGHT = 100
@@ -595,29 +595,29 @@ def run_experiment():
     )
 
     config = {
-        "mutation_prob": 0.05,
+        "mutation_prob": 0.02,
         "delimited_mutation_prob": 0.01,
-        "open_mutation_prob": 0.085,
-        "metagene_mutation_prob": 0.0055,
-        "delimiter_insert_prob": 0.0065,
-        "delimit_delete_prob": 0.0015,
+        "open_mutation_prob": 0.0011,
+        "metagene_mutation_prob": 0.0015,
+        "delimiter_insert_prob": 0.002,
+        "delimit_delete_prob": 0.008,
         "crossover_prob": 0.00,
-         "elitism_ratio": 0.00,
-        "base_gene_prob": 0.40,
-        "metagene_prob": 0.85,
-        "max_individual_length": 50,
-        "population_size": 100,
-        "num_parents": 30, 
-        "max_generations": 70,
+        "elitism_ratio": 0.00,
+        "base_gene_prob": 0.90,     # π12
+        "metagene_prob": 0.50,      # π13
+        "max_individual_length": 100,
+        "population_size": 500,
+        "num_parents": 200,
+        "max_generations": 2000,
         "delimiters": False,
         "delimiter_space": 2,
-        "logging": False, 
+        "logging": False,
         "generation_logging": False,
-        "mutation_logging": False, 
+        "mutation_logging": False,
         "crossover_logging": False,
-        "individual_logging": False, 
+        "individual_logging": False,
         "seed": GLOBAL_SEED,
-        "lru_cache_size": 26,
+        "lru_cache_size": 45,
     }
 
     ga = M_E_GA_Base(
