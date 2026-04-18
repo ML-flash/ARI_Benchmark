@@ -34,12 +34,12 @@ GLOBAL_SEED = None  # MEGA evolutionary seed — None for stochastic runs
 ENV_SEED = 42069    # Environment seed — fixed standard candle matching benchmark
 random.seed(GLOBAL_SEED)
 
-VOLUME = 45
-NUM_ITEMS = 2000
-NUM_GROUPS = 5
-MAX_SIZE = 80
-MAX_WEIGHT = 100
-MAX_DENSITY = 25
+VOLUME = 40
+NUM_ITEMS = 7000
+NUM_GROUPS = 6
+MAX_SIZE = 45
+MAX_WEIGHT = 35
+MAX_DENSITY = 35
 
 CELL_SIZE = 5
 
